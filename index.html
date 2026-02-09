@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>YONMUS - Servis Elektronika Profesional</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* Custom styles for dominant blue/purple theme */
+        .gradient-blue-purple {
+            background: linear-gradient(to right, #4A00E0, #8E2DE2); /* Blue to Purple gradient */
+        }
+        .text-blue-purple {
+            color: #4A00E0; /* A shade of blue */
+        }
+        .border-blue-purple {
+            border-color: #8E2DE2; /* A shade of purple */
+        }
+        .bg-blue-accent {
+            background-color: #667EEA; /* Lighter blue for accents */
+        }
+        .bg-purple-accent {
+            background-color: #9F7AEA; /* Lighter purple for accents */
+        }
+        /* Style for the fixed navbar to prevent content overlap */
+        body {
+            padding-top: 64px; /* Adjust this value if navbar height changes */
+        }
+        /* Mobile menu specific styles */
+        #mobile-menu {
+            display: none;
+        }
+        #mobile-menu.active {
+            display: block;
+        }
+    </style>
+</head>
+<body class="font-sans antialiased bg-gray-100 text-gray-800">
+
+    <!-- Header & Navbar -->
+    <header class="fixed top-0 left-0 right-0 z-50 bg-gradient-to-r from-blue-800 to-purple-800 shadow-lg">
+        <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="#" class="text-2xl font-bold text-white hover:text-gray-200">YONMUS</a>
+            <div class="hidden md:flex space-x-6">
+                <a href="#home" class="text-white hover:text-gray-200 transition-colors duration-300">Home</a>
+                <a href="#tentang" class="text-white hover:text-gray-200 transition-colors duration-300">Tentang</a>
+                <a href="#layanan" class="text-white hover:text-gray-200 transition-colors duration-300">Layanan</a>
+                <a href="#konsultasi" class="text-white hover:text-gray-200 transition-colors duration-300">Konsultasi</a>
+                <a href="#pesan-servis" class="text-white hover:text-gray-200 transition-colors duration-300">Pesan Servis</a>
+                <a href="dashboard.html" class="text-white hover:text-gray-200 transition-colors duration-300">Dashboard</a>
+            </div>
+            <!-- Mobile menu button -->
+            <div class="md:hidden">
+                <button id="mobile-menu-button" class="text-white focus:outline-none">
+                    <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+                    </svg>
+                </button>
+            </div>
+        </nav>
+        <!-- Mobile menu dropdown -->
+        <div id="mobile-menu" class="hidden md:hidden bg-blue-800 pb-4">
+            <a href="#home" class="block px-6 py-2 text-white hover:bg-blue-700 transition-colors duration-300">Home</a>
+            <a href="#tentang" class="block px-6 py-2 text-white hover:bg-blue-700 transition-colors duration-300">Tentang</a>
+            <a href="#layanan" class="block px-6 py-2 text-white hover:bg-blue-700 transition-colors duration-300">Layanan</a>
+            <a href="#konsultasi" class="block px-6 py-2 text-white hover:bg-blue-700 transition-colors duration-300">Konsultasi</a>
+            <a href="#pesan-servis" class="block px-6 py-2 text-white hover:bg-blue-700 transition-colors duration-300">Pesan Servis</a>
+            <a href="dashboard.html" class="block px-6 py-2 text-white hover:bg-blue-700 transition-colors duration-300">Dashboard</a>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section id="home" class="relative bg-gradient-blue-purple text-white py-20 md:py-32 flex items-center justify-center min-h-screen-minus-nav overflow-hidden">
+            <div class="absolute inset-0 bg-cover bg-center opacity-20" style="background-image: url('https://source.unsplash.com/1600x900/?electronics-repair');"></div>
+            <div class="relative z-10 text-center max-w-4xl mx-auto px-6">
+                <h1 class="text-4xl md:text-6xl font-extrabold leading-tight mb-4 animate-fade-in-up">
+                    Servis Elektronika YONMUS
+                </h1>
+                <p class="text-lg md:text-xl mb-8 opacity-90 animate-fade-in-up delay-200">
+                    Solusi Terpercaya untuk Perbaikan dan Perawatan Perangkat Elektronik Anda. Profesional, Cepat, dan Bergaransi.
+                </p>
+                <div class="flex flex-col sm:flex-row justify-center space-y-4 sm:space-y-0 sm:space-x-4 animate-fade-in-up delay-400">
+                    <a href="#konsultasi" class="bg-white text-blue-purple font-semibold py-3 px-8 rounded-full shadow-lg hover:bg-gray-200 transition-all duration-300 transform hover:scale-105">
+                        Konsultasi Sekarang
+                    </a>
+                    <a href="#pesan-servis" class="bg-blue-accent text-white font-semibold py-3 px-8 rounded-full shadow-lg hover:bg-purple-accent transition-all duration-300 transform hover:scale-105">
+                        Pesan Layanan
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section Sejarah YONMUS -->
+        <section id="tentang" class="py-16 bg-white">
+            <div class="container mx-auto px-6 text-center max-w-3xl">
+                <h2 class="text-4xl font-bold mb-8 text-blue-purple">Sejarah YONMUS</h2>
+                <p class="text-lg leading-relaxed text-gray-700 mb-4">
+                    Didirikan pada tahun [Tahun Pendirian], YONMUS bermula dari semangat untuk menyediakan solusi perbaikan elektronik yang andal dan terjangkau bagi masyarakat. Dengan dedikasi terhadap kualitas dan kepuasan pelanggan, kami terus berkembang dari bengkel kecil menjadi penyedia jasa servis elektronik terkemuka yang melayani berbagai kebutuhan, dari perangkat rumah tangga hingga gawai modern.
+                </p>
+                <p class="text-lg leading-relaxed text-gray-700">
+                    Kami percaya bahwa setiap perangkat elektronik memiliki nilai dan dapat diperpanjang masa pakainya dengan perawatan yang tepat. Tim teknisi kami yang berpengalaman dan bersertifikasi selalu siap memberikan layanan terbaik, menggunakan suku cadang berkualitas dan metode perbaikan terkini.
+                </p>
+            </div>
+        </section>
+
+        <!-- Section Layanan Jasa -->
+        <section id="layanan" class="py-16 bg-gray-50">
+            <div class="container mx-auto px-6">
+                <h2 class="text-4xl font-bold text-center mb-10 text-blue-purple">Layanan Kami</h2>
+                <div class="flex justify-center mb-8">
+                    <input type="text" id="searchService" placeholder="Cari Layanan..."
+                        class="p-3 border border-gray-300 rounded-lg shadow-sm focus:ring-blue-500 focus:border-blue-500 w-full max-w-md">
+                </div>
+
+                <div id="service-list" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <!-- Contoh Card Layanan -->
+                    <div class="service-card bg-white p-8 rounded-xl shadow-xl hover:shadow-2xl transition-shadow duration-300 transform hover:-translate-y-1" data-service="laptop">
+                        <img src="https://source.unsplash.com/400x250/?laptop-repair" alt="Servis Laptop" class="rounded-lg mb-6 w-full h-48 object-cover">
+                        <h3 class="text-2xl font-semibold mb-4 text-purple-700">Servis Laptop & PC</h3>
+                        <p class="text-gray-600">Perbaikan perangkat keras, instalasi software, upgrade komponen, dan pembersihan virus untuk laptop dan komputer Anda.</p>
+                    </div>
+                    <div class="service-card bg-white p-8 rounded-xl shadow-xl hover:shadow-2xl transition-shadow duration-300 transform hover:-translate-y-1" data-service="handphone">
+                        <img src="https://source.unsplash.com/400x250/?phone-repair" alt="Servis Handphone" class="rounded-lg mb-6 w-full h-48 object-cover">
+                        <h3 class="text-2xl font-semibold mb-4 text-purple-700">Servis Handphone & Tablet</h3>
+                        <p class="text-gray-600">Perbaikan layar pecah, penggantian baterai, masalah software, dan komponen lainnya untuk smartphone dan tablet.</p>
+                    </div>
+                    <div class="service-card bg-white p-8 rounded-xl shadow-xl hover:shadow-2xl transition-shadow duration-300 transform hover:-translate-y-1" data-service="tv">
+                        <img src="https://source.unsplash.com/400x250/?tv-repair" alt="Servis TV" class="rounded-lg mb-6 w-full h-48 object-cover">
+                        <h3 class="text-2xl font-semibold mb-4 text-purple-700">Servis TV & Audio</h3>
+                        <p class="text-gray-600">Perbaikan TV LED/LCD/Plasma, sistem audio, soundbar, dan perangkat hiburan rumah lainnya.</p>
+                    </div>
+                    <div class="service-card bg-white p-8 rounded-xl shadow-xl hover:shadow-2xl transition-shadow duration-300 transform hover:-translate-y-1" data-service="peralatan-rumah-tangga">
+                        <img src="https://source.unsplash.com/400x250/?home-appliance-repair" alt="Servis Peralatan Rumah Tangga" class="rounded-lg mb-6 w-full h-48 object-cover">
+                        <h3 class="text-2xl font-semibold mb-4 text-purple-700">Servis Peralatan Rumah Tangga</h3>
+                        <p class="text-gray-600">Perbaikan kulkas, mesin cuci, AC, microwave, dan peralatan elektronik rumah tangga lainnya.</p>
+                    </div>
+                    <div class="service-card bg-white p-8 rounded-xl shadow-xl hover:shadow-2xl transition-shadow duration-300 transform hover:-translate-y-1" data-service="game-console">
+                        <img src="https://source.unsplash.com/400x250/?game-console-repair" alt="Servis Konsol Game" class="rounded-lg mb-6 w-full h-48 object-cover">
+                        <h3 class="text-2xl font-semibold mb-4 text-purple-700">Servis Konsol Game</h3>
+                        <p class="text-gray-600">Perbaikan PlayStation, Xbox, Nintendo, dan konsol game lainnya yang bermasalah.</p>
+                    </div>
+                    <div class="service-card bg-white p-8 rounded-xl shadow-xl hover:shadow-2xl transition-shadow duration-300 transform hover:-translate-y-1" data-service="kamera">
+                        <img src="https://source.unsplash.com/400x250/?camera-repair" alt="Servis Kamera" class="rounded-lg mb-6 w-full h-48 object-cover">
+                        <h3 class="text-2xl font-semibold mb-4 text-purple-700">Servis Kamera Digital</h3>
+                        <p class="text-gray-600">Perbaikan kamera DSLR, mirrorless, lensa, dan aksesoris kamera lainnya.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section Keunggulan YONMUS -->
+        <section id="keunggulan" class="py-16 bg-blue-accent text-white">
+            <div class="container mx-auto px-6">
+                <h2 class="text-4xl font-bold text-center mb-10">Mengapa Memilih YONMUS?</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <!-- Card Keunggulan 1 -->
+                    <div class="bg-white text-gray-800 p-8 rounded-xl shadow-xl flex flex-col items-center text-center transform hover:scale-105 transition-transform duration-300">
+                        <div class="text-5xl text-purple-600 mb-4">💡</div>
+                        <h3 class="text-2xl font-semibold mb-3">Teknisi Berpengalaman</h3>
+                        <p class="text-gray-600">Tim ahli kami memiliki bertahun-tahun pengalaman di bidang perbaikan elektronik.</p>
+                    </div>
+                    <!-- Card Keunggulan 2 -->
+                    <div class="bg-white text-gray-800 p-8 rounded-xl shadow-xl flex flex-col items-center text-center transform hover:scale-105 transition-transform duration-300">
+                        <div class="text-5xl text-purple-600 mb-4">⏱️</div>
+                        <h3 class="text-2xl font-semibold mb-3">Layanan Cepat & Efisien</h3>
+                        <p class="text-gray-600">Kami memahami nilai waktu Anda, perbaikan dilakukan secepat mungkin tanpa mengurangi kualitas.</p>
+                    </div>
+                    <!-- Card Keunggulan 3 -->
+                    <div class="bg-white text-gray-800 p-8 rounded-xl shadow-xl flex flex-col items-center text-center transform hover:scale-105 transition-transform duration-300">
+                        <div class="text-5xl text-purple-600 mb-4">🛡️</div>
+                        <h3 class="text-2xl font-semibold mb-3">Garansi Perbaikan</h3>
+                        <p class="text-gray-600">Setiap perbaikan disertai garansi untuk ketenangan pikiran Anda.</p>
+                    </div>
+                    <!-- Card Keunggulan 4 -->
+                    <div class="bg-white text-gray-800 p-8 rounded-xl shadow-xl flex flex-col items-center text-center transform hover:scale-105 transition-transform duration-300">
+                        <div class="text-5xl text-purple-600 mb-4">✅</div>
+                        <h3 class="text-2xl font-semibold mb-3">Suku Cadang Original</h3>
+                        <p class="text-gray-600">Kami hanya menggunakan suku cadang berkualitas dan original untuk memastikan performa terbaik.</p>
+                    </div>
+                    <!-- Card Keunggulan 5 -->
+                    <div class="bg-white text-gray-800 p-8 rounded-xl shadow-xl flex flex-col items-center text-center transform hover:scale-105 transition-transform duration-300">
+                        <div class="text-5xl text-purple-600 mb-4">💲</div>
+                        <h3 class="text-2xl font-semibold mb-3">Harga Kompetitif</h3>
+                        <p class="text-gray-600">Dapatkan layanan berkualitas tinggi dengan harga yang transparan dan bersaing.</p>
+                    </div>
+                    <!-- Card Keunggulan 6 -->
+                    <div class="bg-white text-gray-800 p-8 rounded-xl shadow-xl flex flex-col items-center text-center transform hover:scale-105 transition-transform duration-300">
+                        <div class="text-5xl text-purple-600 mb-4">📍</div>
+                        <h3 class="text-2xl font-semibold mb-3">Layanan Jemput & Antar</h3>
+                        <p class="text-gray-600">Kemudahan dengan layanan jemput dan antar perangkat Anda (area tertentu).</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section Konsultasi -->
+        <section id="konsultasi" class="py-16 bg-gray-100">
+            <div class="container mx-auto px-6 max-w-2xl">
+                <h2 class="text-4xl font-bold text-center mb-10 text-blue-purple">Konsultasi Gratis</h2>
+                <div class="bg-white p-8 rounded-xl shadow-xl">
+                    <form id="consultationForm">
+                        <div class="mb-6">
+                            <label for="consultName" class="block text-gray-700 text-sm font-bold mb-2">Nama Lengkap:</label>
+                            <input type="text" id="consultName" name="consultName" required
+                                class="shadow appearance-none border rounded-lg w-full py-3 px-4 text-gray-700 leading-tight focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent">
+                        </div>
+                        <div class="mb-6">
+                            <label for="consultWa" class="block text-gray-700 text-sm font-bold mb-2">Nomor WhatsApp:</label>
+                            <input type="tel" id="consultWa" name="consultWa" required
+                                class="shadow appearance-none border rounded-lg w-full py-3 px-4 text-gray-700 leading-tight focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent">
+                        </div>
+                        <div class="mb-6">
+                            <label for="consultType" class="block text-gray-700 text-sm font-bold mb-2">Jenis Elektronik:</label>
+                            <select id="consultType" name="consultType" required
+                                class="shadow border rounded-lg w-full py-3 px-4 text-gray-700 leading-tight focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent">
+                                <option value="">Pilih Jenis Elektronik</option>
+                                <option value="laptop">Laptop</option>
+                                <option value="handphone">Handphone</option>
+                                <option value="tv">TV</option>
+                                <option value="kulkas">Kulkas</option>
+                                <option value="mesin-cuci">Mesin Cuci</option>
+                                <option value="ac">AC</option>
+                                <option value="lainnya">Lainnya</option>
+                            </select>
+                        </div>
+                        <div class="mb-6">
+                            <label for="consultIssue" class="block text-gray-700 text-sm font-bold mb-2">Deskripsikan Keluhan Anda:</label>
+                            <textarea id="consultIssue" name="consultIssue" rows="5" required
+                                class="shadow appearance-none border rounded-lg w-full py-3 px-4 text-gray-700 leading-tight focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"></textarea>
+                        </div>
+                        <div class="mb-6">
+                            <label for="consultPhoto" class="block text-gray-700 text-sm font-bold mb-2">Upload Foto (Opsional):</label>
+                            <input type="file" id="consultPhoto" name="consultPhoto" accept="image/*"
+                                class="shadow appearance-none border rounded-lg w-full py-3 px-4 text-gray-700 leading-tight focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent file:mr-4 file:py-2 file:px-4 file:rounded-full file:border-0 file:text-sm file:font-semibold file:bg-blue-accent file:text-white hover:file:bg-purple-accent">
+                        </div>
+                        <div class="flex items-center justify-between">
+                            <button type="submit"
+                                class="bg-blue-800 hover:bg-purple-700 text-white font-bold py-3 px-6 rounded-full focus:outline-none focus:shadow-outline transition-all duration-300 transform hover:scale-105">
+                                Kirim Konsultasi
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section Pesan Servis -->
+        <section id="pesan-servis" class="py-16 bg-blue-accent text-white">
+            <div class="container mx-auto px-6 max-w-2xl">
+                <h2 class="text-4xl font-bold text-center mb-10">Pesan Layanan Servis</h2>
+                <div class="bg-white p-8 rounded-xl shadow-xl text-gray-800">
+                    <form id="orderForm">
+                        <div class="mb-6">
+                            <label for="orderName" class="block text-gray-700 text-sm font-bold mb-2">Nama Lengkap:</label>
+                            <input type="text" id="orderName" name="orderName" required
+                                class="shadow appearance-none border rounded-lg w-full py-3 px-4 text-gray-700 leading-tight focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent">
+                        </div>
+                        <div class="mb-6">
+                            <label for="orderWa" class="block text-gray-700 text-sm font-bold mb-2">Nomor WhatsApp:</label>
+                            <input type="tel" id="orderWa" name="orderWa" required
+                                class="shadow appearance-none border rounded-lg w-full py-3 px-4 text-gray-700 leading-tight focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent">
+                        </div>
+                        <div class="mb-6">
+                            <label for="orderAddress" class="block text-gray-700 text-sm font-bold mb-2">Alamat Lengkap:</label>
+                            <textarea id="orderAddress" name="orderAddress" rows="3" required
+                                class="shadow appearance-none border rounded-lg w-full py-3 px-4 text-gray-700 leading-tight focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"></textarea>
+                        </div>
+                        <div class="mb-6">
+                            <label for="orderService" class="block text-gray-700 text-sm font-bold mb-2">Pilih Layanan:</label>
+                            <select id="orderService" name="orderService" required
+                                class="shadow border rounded-lg w-full py-3 px-4 text-gray-700 leading-tight focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent">
+                                <option value="">Pilih Jenis Layanan</option>
+                                <option value="laptop">Servis Laptop & PC</option>
+                                <option value="handphone">Servis Handphone & Tablet</option>
+                                <option value="tv">Servis TV & Audio</option>
+                                <option value="peralatan-rumah-tangga">Servis Peralatan Rumah Tangga</option>
+                                <option value="game-console">Servis Konsol Game</option>
+                                <option value="kamera">Servis Kamera Digital</option>
+                            </select>
+                        </div>
+                        <div class="mb-6">
+                            <label class="block text-gray-700 text-sm font-bold mb-2">Jenis Pengerjaan:</label>
+                            <div class="mt-2">
+                                <label class="inline-flex items-center mr-4">
+                                    <input type="radio" class="form-radio text-blue-600" name="orderType" value="datang" checked>
+                                    <span class="ml-2">Datang ke Lokasi Kami</span>
+                                </label>
+                                <label class="inline-flex items-center">
+                                    <input type="radio" class="form-radio text-blue-600" name="orderType" value="panggilan">
+                                    <span class="ml-2">Panggilan ke Rumah/Kantor</span>
+                                </label>
+                            </div>
+                        </div>
+                        <div class="mb-6">
+                            <label for="orderDesc" class="block text-gray-700 text-sm font-bold mb-2">Deskripsi Masalah Detail:</label>
+                            <textarea id="orderDesc" name="orderDesc" rows="5" required
+                                class="shadow appearance-none border rounded-lg w-full py-3 px-4 text-gray-700 leading-tight focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"></textarea>
+                        </div>
+                        <div class="mb-6">
+                            <label for="orderDate" class="block text-gray-700 text-sm font-bold mb-2">Pilih Tanggal Jadwal Servis:</label>
+                            <input type="date" id="orderDate" name="orderDate" required
+                                class="shadow appearance-none border rounded-lg w-full py-3 px-4 text-gray-700 leading-tight focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent">
+                        </div>
+                        <div class="flex items-center justify-between mb-6">
+                            <button type="submit"
+                                class="bg-purple-600 hover:bg-blue-700 text-white font-bold py-3 px-6 rounded-full focus:outline-none focus:shadow-outline transition-all duration-300 transform hover:scale-105">
+                                Pesan Sekarang
+                            </button>
+                        </div>
+                    </form>
+
+                    <div id="orderSummary" class="mt-8 p-6 border-t-2 border-gray-200 bg-gray-50 rounded-xl hidden">
+                        <h3 class="text-2xl font-bold mb-4 text-blue-purple">Ringkasan Pesanan Anda:</h3>
+                        <p class="text-gray-700 mb-2"><strong>Nama:</strong> <span id="summaryName"></span></p>
+                        <p class="text-gray-700 mb-2"><strong>WhatsApp:</strong> <span id="summaryWa"></span></p>
+                        <p class="text-gray-700 mb-2"><strong>Alamat:</strong> <span id="summaryAddress"></span></p>
+                        <p class="text-gray-700 mb-2"><strong>Layanan:</strong> <span id="summaryService"></span></p>
+                        <p class="text-gray-700 mb-2"><strong>Jenis Pengerjaan:</strong> <span id="summaryOrderType"></span></p>
+                        <p class="text-gray-700 mb-2"><strong>Deskripsi Masalah:</strong> <span id="summaryDesc"></span></p>
+                        <p class="text-gray-700 mb-2"><strong>Tanggal Servis:</strong> <span id="summaryDate"></span></p>
+                        <p class="text-green-600 font-semibold mt-4">Pesanan Anda telah diterima. Kami akan segera menghubungi Anda!</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-10">
+        <div class="container mx-auto px-6 text-center">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
+                <div>
+                    <h3 class="text-xl font-bold mb-4 text-blue-accent">YONMUS Elektronika</h3>
+                    <p class="text-gray-400">Penyedia jasa servis elektronik terpercaya untuk kebutuhan rumah dan bisnis Anda.</p>
+                </div>
+                <div>
+                    <h3 class="text-xl font-bold mb-4 text-blue-accent">Kontak Kami</h3>
+                    <p class="text-gray-400">Email: info@yonmus.com</p>
+                    <p class="text-gray-400">Telepon: +62 812-3456-7890</p>
+                    <p class="text-gray-400">Alamat: Jl. Contoh No. 123, Kota Anda, Indonesia</p>
+                </div>
+                <div>
+                    <h3 class="text-xl font-bold mb-4 text-blue-accent">Ikuti Kami</h3>
+                    <div class="flex justify-center space-x-4">
+                        <a href="#" class="text-gray-400 hover:text-white transition-colors duration-300">Facebook</a>
+                        <a href="#" class="text-gray-400 hover:text-white transition-colors duration-300">Instagram</a>
+                        <a href="#" class="text-gray-400 hover:text-white transition-colors duration-300">Twitter</a>
+                    </div>
+                </div>
+            </div>
+            <div class="border-t border-gray-700 pt-8 text-gray-500">
+                &copy; 2026 YONMUS. Hak Cipta Dilindungi.
+            </div>
+        </div>
+    </footer>
+
+    <!-- Link to external JS file -->
+    <script src="assets/js/main.js"></script>
+    <script>
+        // JavaScript for mobile menu toggle
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        if (mobileMenuButton && mobileMenu) {
+            mobileMenuButton.addEventListener('click', () => {
+                mobileMenu.classList.toggle('active');
+            });
+        }
+
+        // JavaScript for service search/filtering (basic example)
+        const searchServiceInput = document.getElementById('searchService');
+        const serviceCards = document.querySelectorAll('.service-card');
+
+        if (searchServiceInput && serviceCards.length > 0) {
+            searchServiceInput.addEventListener('keyup', (event) => {
+                const searchTerm = event.target.value.toLowerCase();
+                serviceCards.forEach(card => {
+                    const cardText = card.textContent.toLowerCase();
+                    const cardCategory = card.dataset.category ? card.dataset.category.toLowerCase() : '';
+                    if (cardText.includes(searchTerm) || cardCategory.includes(searchTerm)) {
+                        card.style.display = 'block';
+                    } else {
+                        card.style.display = 'none';
+                    }
+                });
+            });
+        }
+
+        // JavaScript for order form submission and summary (basic example)
+        const orderForm = document.getElementById('orderForm');
+        const orderSummary = document.getElementById('orderSummary');
+
+        if (orderForm && orderSummary) {
+            orderForm.addEventListener('submit', function(event) {
+                event.preventDefault(); // Prevent default form submission
+
+                // Get form values
+                const name = document.getElementById('orderName').value;
+                const wa = document.getElementById('orderWa').value;
+                const address = document.getElementById('orderAddress').value;
+                const serviceSelect = document.getElementById('orderService');
+                const service = serviceSelect.options[serviceSelect.selectedIndex].text;
+                const orderType = document.querySelector('input[name="orderType"]:checked').value === 'datang' ? 'Datang ke Lokasi Kami' : 'Panggilan ke Rumah/Kantor';
+                const desc = document.getElementById('orderDesc').value;
+                const date = document.getElementById('orderDate').value;
+
+                // Populate summary div
+                document.getElementById('summaryName').textContent = name;
+                document.getElementById('summaryWa').textContent = wa;
+                document.getElementById('summaryAddress').textContent = address;
+                document.getElementById('summaryService').textContent = service;
+                document.getElementById('summaryOrderType').textContent = orderType;
+                document.getElementById('summaryDesc').textContent = desc;
+                document.getElementById('summaryDate').textContent = date;
+
+                // Show summary and hide form (optional, could just clear form)
+                orderSummary.classList.remove('hidden');
+                orderForm.reset(); // Clear the form
+
+                // In a real application, you would send this data to a server here
+                alert('Pesanan Anda telah terkirim!');
+            });
+        }
+
+        // Basic consultation form submission (for demonstration)
+        const consultationForm = document.getElementById('consultationForm');
+        if (consultationForm) {
+            consultationForm.addEventListener('submit', function(event) {
+                event.preventDefault();
+                alert('Konsultasi Anda telah terkirim! Kami akan segera menghubungi Anda.');
+                consultationForm.reset();
+            });
+        }
+
+    </script>
+</body>
+</html>
