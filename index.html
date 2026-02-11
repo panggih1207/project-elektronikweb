@@ -72,32 +72,58 @@
 
     <main>
         <!-- Hero Section -->
-        <section id="home" class="relative bg-gradient-blue-purple text-white py-20 md:py-32 flex items-center justify-center min-h-screen-minus-nav overflow-hidden">
-            <div class="absolute inset-0 bg-cover bg-center opacity-20" style="background-image: url('https://source.unsplash.com/1600x900/?electronics-repair');"></div>
-            <div class="relative z-10 text-center max-w-4xl mx-auto px-6">
-                <h1 class="text-4xl md:text-6xl font-extrabold leading-tight mb-4 animate-fade-in-up">
-                    Servis Elektronika YONMUS
-                </h1>
-                <p class="text-lg md:text-xl mb-8 opacity-90 animate-fade-in-up delay-200">
-                    Solusi Terpercaya untuk Perbaikan dan Perawatan Perangkat Elektronik Anda. Profesional, Cepat, dan Bergaransi.
-                </p>
-                <div class="flex flex-col sm:flex-row justify-center space-y-4 sm:space-y-0 sm:space-x-4 animate-fade-in-up delay-400">
-                    <a href="#konsultasi" class="bg-white text-blue-purple font-semibold py-3 px-8 rounded-full shadow-lg hover:bg-gray-200 transition-all duration-300 transform hover:scale-105">
-                        Konsultasi Sekarang
-                    </a>
-                    <a href="#pesan-servis" class="bg-blue-accent text-white font-semibold py-3 px-8 rounded-full shadow-lg hover:bg-purple-accent transition-all duration-300 transform hover:scale-105">
-                        Pesan Layanan
-                    </a>
-                </div>
-            </div>
-        </section>
+      <section id="home" class="relative text-white py-20 md:py-32 flex items-center justify-center min-h-screen-minus-nav overflow-hidden">
+    
+    <!-- Background Image -->
+    <div 
+        class="absolute inset-0 bg-cover bg-center"
+        style="background-image: url('/image/asseticon.jpeg');">
+    </div>
+
+    <!-- Overlay Gelap (biar text tetap jelas tapi gambar tidak pudar banget) -->
+    <div class="absolute inset-0 bg-black/50"></div>
+
+    <!-- Content -->
+    <div class="relative z-10 text-center max-w-4xl mx-auto px-6">
+        <h1 class="text-4xl md:text-6xl font-extrabold leading-tight mb-4 animate-fade-in-up drop-shadow-xl">
+            Servis Elektronika YONMUS
+        </h1>
+
+        <p class="text-lg md:text-xl mb-8 text-white/90 animate-fade-in-up delay-200 drop-shadow-lg">
+            Solusi Terpercaya untuk Perbaikan dan Perawatan Perangkat Elektronik Anda. Profesional, Cepat, dan Bergaransi.
+        </p>
+
+         <div class="flex flex-col sm:flex-row justify-center gap-4 animate-fade-in-up delay-400">
+
+         <a href="#konsultasi"
+          class="bg-white text-blue-purple font-semibold py-3 px-8 rounded-full shadow-lg
+             transition-all duration-300 ease-out
+              hover:bg-gray-200 hover:-translate-y-1 hover:shadow-2xl
+              active:translate-y-0 active:shadow-md">
+              Konsultasi Sekarang
+         </a>
+
+         <a href="#pesan-servis"
+           class="bg-blue-accent text-white font-semibold py-3 px-8 rounded-full shadow-lg
+           transition-all duration-300 ease-out
+           hover:bg-purple-accent hover:-translate-y-1 hover:shadow-2xl
+           active:translate-y-0 active:shadow-md">
+            Pesan Layanan
+          </a>
+
+</div>
+
+    </div>
+
+</section>
+
 
         <!-- Section Sejarah YONMUS -->
         <section id="tentang" class="py-16 bg-white">
             <div class="container mx-auto px-6 text-center max-w-3xl">
                 <h2 class="text-4xl font-bold mb-8 text-blue-purple">Sejarah YONMUS</h2>
                 <p class="text-lg leading-relaxed text-gray-700 mb-4">
-                    Didirikan pada tahun [Tahun Pendirian], YONMUS bermula dari semangat untuk menyediakan solusi perbaikan elektronik yang andal dan terjangkau bagi masyarakat. Dengan dedikasi terhadap kualitas dan kepuasan pelanggan, kami terus berkembang dari bengkel kecil menjadi penyedia jasa servis elektronik terkemuka yang melayani berbagai kebutuhan, dari perangkat rumah tangga hingga gawai modern.
+                    Didirikan pada tahun 2023 , YONMUS bermula dari nama  Pasangan YONO DAN SIMUS Yang semangat untuk menyediakan solusi perbaikan elektronik yang andal dan terjangkau bagi masyarakat. Dengan dedikasi terhadap kualitas dan kepuasan pelanggan, kami terus berkembang dari bengkel kecil menjadi penyedia jasa servis elektronik terkemuka yang melayani berbagai kebutuhan, dari perangkat rumah tangga hingga gawai modern.
                 </p>
                 <p class="text-lg leading-relaxed text-gray-700">
                     Kami percaya bahwa setiap perangkat elektronik memiliki nilai dan dapat diperpanjang masa pakainya dengan perawatan yang tepat. Tim teknisi kami yang berpengalaman dan bersertifikasi selalu siap memberikan layanan terbaik, menggunakan suku cadang berkualitas dan metode perbaikan terkini.
@@ -117,22 +143,22 @@
                 <div id="service-list" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                     <!-- Contoh Card Layanan -->
                     <div class="service-card bg-white p-8 rounded-xl shadow-xl hover:shadow-2xl transition-shadow duration-300 transform hover:-translate-y-1" data-service="laptop">
-                        <img src="https://source.unsplash.com/400x250/?laptop-repair" alt="Servis Laptop" class="rounded-lg mb-6 w-full h-48 object-cover">
+                        <img src="/image/ServisLaptop.png" alt="Servis Laptop" class="rounded-lg mb-6 w-full h-48 object-cover">
                         <h3 class="text-2xl font-semibold mb-4 text-purple-700">Servis Laptop & PC</h3>
                         <p class="text-gray-600">Perbaikan perangkat keras, instalasi software, upgrade komponen, dan pembersihan virus untuk laptop dan komputer Anda.</p>
                     </div>
                     <div class="service-card bg-white p-8 rounded-xl shadow-xl hover:shadow-2xl transition-shadow duration-300 transform hover:-translate-y-1" data-service="handphone">
-                        <img src="https://source.unsplash.com/400x250/?phone-repair" alt="Servis Handphone" class="rounded-lg mb-6 w-full h-48 object-cover">
+                        <img src="/image/tablet dan hp.png" alt="Servis Handphone" class="rounded-lg mb-6 w-full h-48 object-cover">
                         <h3 class="text-2xl font-semibold mb-4 text-purple-700">Servis Handphone & Tablet</h3>
                         <p class="text-gray-600">Perbaikan layar pecah, penggantian baterai, masalah software, dan komponen lainnya untuk smartphone dan tablet.</p>
                     </div>
                     <div class="service-card bg-white p-8 rounded-xl shadow-xl hover:shadow-2xl transition-shadow duration-300 transform hover:-translate-y-1" data-service="tv">
-                        <img src="https://source.unsplash.com/400x250/?tv-repair" alt="Servis TV" class="rounded-lg mb-6 w-full h-48 object-cover">
+                        <img src="/image/audio.png" alt="Servis TV" class="rounded-lg mb-6 w-full h-48 object-cover">
                         <h3 class="text-2xl font-semibold mb-4 text-purple-700">Servis TV & Audio</h3>
                         <p class="text-gray-600">Perbaikan TV LED/LCD/Plasma, sistem audio, soundbar, dan perangkat hiburan rumah lainnya.</p>
                     </div>
                     <div class="service-card bg-white p-8 rounded-xl shadow-xl hover:shadow-2xl transition-shadow duration-300 transform hover:-translate-y-1" data-service="peralatan-rumah-tangga">
-                        <img src="https://source.unsplash.com/400x250/?home-appliance-repair" alt="Servis Peralatan Rumah Tangga" class="rounded-lg mb-6 w-full h-48 object-cover">
+                        <img src="/image/peralatanRUmah tangga.png" alt="Servis Peralatan Rumah Tangga" class="rounded-lg mb-6 w-full h-48 object-cover">
                         <h3 class="text-2xl font-semibold mb-4 text-purple-700">Servis Peralatan Rumah Tangga</h3>
                         <p class="text-gray-600">Perbaikan kulkas, mesin cuci, AC, microwave, dan peralatan elektronik rumah tangga lainnya.</p>
                     </div>
