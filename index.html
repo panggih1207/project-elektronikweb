@@ -41,7 +41,7 @@
     <!-- Header & Navbar -->
     <header class="fixed top-0 left-0 right-0 z-50 bg-gradient-to-r from-blue-800 to-purple-800 shadow-lg">
         <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
-            <a href="#" class="text-2xl font-bold text-white hover:text-gray-200">YONMUS</a>
+            <a href="#" class="text-2xl font-bold text-white hover:text-gray-200">YS Tech</a>
             <div class="hidden md:flex space-x-6">
                 <a href="#home" class="text-white hover:text-gray-200 transition-colors duration-300">Home</a>
                 <a href="#tentang" class="text-white hover:text-gray-200 transition-colors duration-300">Tentang</a>
@@ -86,7 +86,7 @@
     <!-- Content -->
     <div class="relative z-10 text-center max-w-4xl mx-auto px-6">
         <h1 class="text-4xl md:text-6xl font-extrabold leading-tight mb-4 animate-fade-in-up drop-shadow-xl">
-            Servis Elektronika YONMUS
+            Servis Elektronika YS Tech
         </h1>
 
         <p class="text-lg md:text-xl mb-8 text-white/90 animate-fade-in-up delay-200 drop-shadow-lg">
@@ -121,9 +121,9 @@
         <!-- Section Sejarah YONMUS -->
         <section id="tentang" class="py-16 bg-white">
             <div class="container mx-auto px-6 text-center max-w-3xl">
-                <h2 class="text-4xl font-bold mb-8 text-blue-purple">Sejarah YONMUS</h2>
+                <h2 class="text-4xl font-bold mb-8 text-blue-purple">Sejarah YS Tech</h2>
                 <p class="text-lg leading-relaxed text-gray-700 mb-4">
-                    Didirikan pada tahun 2023 , YONMUS bermula dari nama  Pasangan YONO DAN SIMUS Yang semangat untuk menyediakan solusi perbaikan elektronik yang andal dan terjangkau bagi masyarakat. Dengan dedikasi terhadap kualitas dan kepuasan pelanggan, kami terus berkembang dari bengkel kecil menjadi penyedia jasa servis elektronik terkemuka yang melayani berbagai kebutuhan, dari perangkat rumah tangga hingga gawai modern.
+                    Didirikan pada tahun 2023 , YS Tech bermula dari nama  Pasangan YONO DAN SIMUS Yang semangat untuk menyediakan solusi perbaikan elektronik yang andal dan terjangkau bagi masyarakat. Dengan dedikasi terhadap kualitas dan kepuasan pelanggan, kami terus berkembang dari bengkel kecil menjadi penyedia jasa servis elektronik terkemuka yang melayani berbagai kebutuhan, dari perangkat rumah tangga hingga gawai modern.
                 </p>
                 <p class="text-lg leading-relaxed text-gray-700">
                     Kami percaya bahwa setiap perangkat elektronik memiliki nilai dan dapat diperpanjang masa pakainya dengan perawatan yang tepat. Tim teknisi kami yang berpengalaman dan bersertifikasi selalu siap memberikan layanan terbaik, menggunakan suku cadang berkualitas dan metode perbaikan terkini.
@@ -179,7 +179,7 @@
         <!-- Section Keunggulan YONMUS -->
         <section id="keunggulan" class="py-16 bg-blue-accent text-white">
             <div class="container mx-auto px-6">
-                <h2 class="text-4xl font-bold text-center mb-10">Mengapa Memilih YONMUS?</h2>
+                <h2 class="text-4xl font-bold text-center mb-10">Mengapa Memilih YS Tech</h2>
                 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                     <!-- Card Keunggulan 1 -->
                     <div class="bg-white text-gray-800 p-8 rounded-xl shadow-xl flex flex-col items-center text-center transform hover:scale-105 transition-transform duration-300">
@@ -220,137 +220,204 @@
                 </div>
             </div>
         </section>
+<!-- Section Form Konsultasi + Pesan Servis -->
+<section id="form-servis" class="py-16 bg-gray-100">
+  <div class="container mx-auto px-6 max-w-6xl">
+    
+    <h2 class="text-4xl font-bold text-center mb-12 text-blue-purple">
+      Konsultasi & Pesan Servis
+    </h2>
 
-        <!-- Section Konsultasi -->
-        <section id="konsultasi" class="py-16 bg-gray-100">
-            <div class="container mx-auto px-6 max-w-2xl">
-                <h2 class="text-4xl font-bold text-center mb-10 text-blue-purple">Konsultasi Gratis</h2>
-                <div class="bg-white p-8 rounded-xl shadow-xl">
-                    <form id="consultationForm">
-                        <div class="mb-6">
-                            <label for="consultName" class="block text-gray-700 text-sm font-bold mb-2">Nama Lengkap:</label>
-                            <input type="text" id="consultName" name="consultName" required
-                                class="shadow appearance-none border rounded-lg w-full py-3 px-4 text-gray-700 leading-tight focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent">
-                        </div>
-                        <div class="mb-6">
-                            <label for="consultWa" class="block text-gray-700 text-sm font-bold mb-2">Nomor WhatsApp:</label>
-                            <input type="tel" id="consultWa" name="consultWa" required
-                                class="shadow appearance-none border rounded-lg w-full py-3 px-4 text-gray-700 leading-tight focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent">
-                        </div>
-                        <div class="mb-6">
-                            <label for="consultType" class="block text-gray-700 text-sm font-bold mb-2">Jenis Elektronik:</label>
-                            <select id="consultType" name="consultType" required
-                                class="shadow border rounded-lg w-full py-3 px-4 text-gray-700 leading-tight focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent">
-                                <option value="">Pilih Jenis Elektronik</option>
-                                <option value="laptop">Laptop</option>
-                                <option value="handphone">Handphone</option>
-                                <option value="tv">TV</option>
-                                <option value="kulkas">Kulkas</option>
-                                <option value="mesin-cuci">Mesin Cuci</option>
-                                <option value="ac">AC</option>
-                                <option value="lainnya">Lainnya</option>
-                            </select>
-                        </div>
-                        <div class="mb-6">
-                            <label for="consultIssue" class="block text-gray-700 text-sm font-bold mb-2">Deskripsikan Keluhan Anda:</label>
-                            <textarea id="consultIssue" name="consultIssue" rows="5" required
-                                class="shadow appearance-none border rounded-lg w-full py-3 px-4 text-gray-700 leading-tight focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"></textarea>
-                        </div>
-                        <div class="mb-6">
-                            <label for="consultPhoto" class="block text-gray-700 text-sm font-bold mb-2">Upload Foto (Opsional):</label>
-                            <input type="file" id="consultPhoto" name="consultPhoto" accept="image/*"
-                                class="shadow appearance-none border rounded-lg w-full py-3 px-4 text-gray-700 leading-tight focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent file:mr-4 file:py-2 file:px-4 file:rounded-full file:border-0 file:text-sm file:font-semibold file:bg-blue-accent file:text-white hover:file:bg-purple-accent">
-                        </div>
-                        <div class="flex items-center justify-between">
-                            <button type="submit"
-                                class="bg-blue-800 hover:bg-purple-700 text-white font-bold py-3 px-6 rounded-full focus:outline-none focus:shadow-outline transition-all duration-300 transform hover:scale-105">
-                                Kirim Konsultasi
-                            </button>
-                        </div>
-                    </form>
-                </div>
+    <!-- Grid 2 Card -->
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-10">
+
+      <!-- Card Konsultasi -->
+      <div class="bg-white p-8 rounded-xl shadow-xl">
+        <h3 class="text-2xl font-bold mb-6 text-center text-blue-purple">
+          Konsultasi Gratis
+        </h3>
+
+        <form id="consultationForm">
+          <div class="mb-6">
+            <label for="consultName" class="block text-gray-700 text-sm font-bold mb-2">
+              Nama Lengkap:
+            </label>
+            <input type="text" id="consultName" name="consultName" required
+              class="shadow appearance-none border rounded-lg w-full py-3 px-4 text-gray-700 leading-tight 
+              focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent">
+          </div>
+
+          <div class="mb-6">
+            <label for="consultWa" class="block text-gray-700 text-sm font-bold mb-2">
+              Nomor WhatsApp:
+            </label>
+            <input type="tel" id="consultWa" name="consultWa" required
+              class="shadow appearance-none border rounded-lg w-full py-3 px-4 text-gray-700 leading-tight 
+              focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent">
+          </div>
+
+          <div class="mb-6">
+            <label for="consultType" class="block text-gray-700 text-sm font-bold mb-2">
+              Jenis Elektronik:
+            </label>
+            <select id="consultType" name="consultType" required
+              class="shadow border rounded-lg w-full py-3 px-4 text-gray-700 leading-tight 
+              focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent">
+              <option value="">Pilih Jenis Elektronik</option>
+              <option value="laptop">Laptop</option>
+              <option value="handphone">Handphone</option>
+              <option value="tv">TV</option>
+              <option value="kulkas">Kulkas</option>
+              <option value="mesin-cuci">Mesin Cuci</option>
+              <option value="ac">AC</option>
+              <option value="lainnya">Lainnya</option>
+            </select>
+          </div>
+
+          <div class="mb-6">
+            <label for="consultIssue" class="block text-gray-700 text-sm font-bold mb-2">
+              Deskripsikan Keluhan Anda:
+            </label>
+            <textarea id="consultIssue" name="consultIssue" rows="5" required
+              class="shadow appearance-none border rounded-lg w-full py-3 px-4 text-gray-700 leading-tight 
+              focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"></textarea>
+          </div>
+
+          <div class="mb-6">
+            <label for="consultPhoto" class="block text-gray-700 text-sm font-bold mb-2">
+              Upload Foto (Opsional):
+            </label>
+            <input type="file" id="consultPhoto" name="consultPhoto" accept="image/*"
+              class="shadow appearance-none border rounded-lg w-full py-3 px-4 text-gray-700 leading-tight 
+              focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent 
+              file:mr-4 file:py-2 file:px-4 file:rounded-full file:border-0 file:text-sm 
+              file:font-semibold file:bg-blue-800 file:text-white hover:file:bg-purple-700">
+          </div>
+
+          <div class="flex items-center justify-center">
+            <button type="submit"
+              class="bg-blue-800 hover:bg-purple-700 text-white font-bold py-3 px-6 rounded-full 
+              focus:outline-none focus:shadow-outline transition-all duration-300 transform hover:scale-105">
+              Kirim Konsultasi
+            </button>
+          </div>
+        </form>
+      </div>
+
+      <!-- Card Pesan Servis -->
+      <div class="bg-white p-8 rounded-xl shadow-xl">
+        <h3 class="text-2xl font-bold mb-6 text-center text-blue-purple">
+          Pesan Layanan Servis
+        </h3>
+
+        <form id="orderForm">
+          <div class="mb-6">
+            <label for="orderName" class="block text-gray-700 text-sm font-bold mb-2">
+              Nama Lengkap:
+            </label>
+            <input type="text" id="orderName" name="orderName" required
+              class="shadow appearance-none border rounded-lg w-full py-3 px-4 text-gray-700 leading-tight 
+              focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent">
+          </div>
+
+          <div class="mb-6">
+            <label for="orderWa" class="block text-gray-700 text-sm font-bold mb-2">
+              Nomor WhatsApp:
+            </label>
+            <input type="tel" id="orderWa" name="orderWa" required
+              class="shadow appearance-none border rounded-lg w-full py-3 px-4 text-gray-700 leading-tight 
+              focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent">
+          </div>
+
+          <div class="mb-6">
+            <label for="orderAddress" class="block text-gray-700 text-sm font-bold mb-2">
+              Alamat Lengkap:
+            </label>
+            <textarea id="orderAddress" name="orderAddress" rows="3" required
+              class="shadow appearance-none border rounded-lg w-full py-3 px-4 text-gray-700 leading-tight 
+              focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"></textarea>
+          </div>
+
+          <div class="mb-6">
+            <label for="orderService" class="block text-gray-700 text-sm font-bold mb-2">
+              Pilih Layanan:
+            </label>
+            <select id="orderService" name="orderService" required
+              class="shadow border rounded-lg w-full py-3 px-4 text-gray-700 leading-tight 
+              focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent">
+              <option value="">Pilih Jenis Layanan</option>
+              <option value="laptop">Servis Laptop & PC</option>
+              <option value="handphone">Servis Handphone & Tablet</option>
+              <option value="tv">Servis TV & Audio</option>
+              <option value="peralatan-rumah-tangga">Servis Peralatan Rumah Tangga</option>
+              <option value="game-console">Servis Konsol Game</option>
+              <option value="kamera">Servis Kamera Digital</option>
+            </select>
+          </div>
+
+          <div class="mb-6">
+            <label class="block text-gray-700 text-sm font-bold mb-2">
+              Jenis Pengerjaan:
+            </label>
+            <div class="mt-2 flex gap-6">
+              <label class="inline-flex items-center">
+                <input type="radio" class="form-radio text-blue-600" name="orderType" value="datang" checked>
+                <span class="ml-2">Datang</span>
+              </label>
+
+              <label class="inline-flex items-center">
+                <input type="radio" class="form-radio text-blue-600" name="orderType" value="panggilan">
+                <span class="ml-2">Panggilan</span>
+              </label>
             </div>
-        </section>
+          </div>
 
-        <!-- Section Pesan Servis -->
-        <section id="pesan-servis" class="py-16 bg-blue-accent text-white">
-            <div class="container mx-auto px-6 max-w-2xl">
-                <h2 class="text-4xl font-bold text-center mb-10">Pesan Layanan Servis</h2>
-                <div class="bg-white p-8 rounded-xl shadow-xl text-gray-800">
-                    <form id="orderForm">
-                        <div class="mb-6">
-                            <label for="orderName" class="block text-gray-700 text-sm font-bold mb-2">Nama Lengkap:</label>
-                            <input type="text" id="orderName" name="orderName" required
-                                class="shadow appearance-none border rounded-lg w-full py-3 px-4 text-gray-700 leading-tight focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent">
-                        </div>
-                        <div class="mb-6">
-                            <label for="orderWa" class="block text-gray-700 text-sm font-bold mb-2">Nomor WhatsApp:</label>
-                            <input type="tel" id="orderWa" name="orderWa" required
-                                class="shadow appearance-none border rounded-lg w-full py-3 px-4 text-gray-700 leading-tight focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent">
-                        </div>
-                        <div class="mb-6">
-                            <label for="orderAddress" class="block text-gray-700 text-sm font-bold mb-2">Alamat Lengkap:</label>
-                            <textarea id="orderAddress" name="orderAddress" rows="3" required
-                                class="shadow appearance-none border rounded-lg w-full py-3 px-4 text-gray-700 leading-tight focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"></textarea>
-                        </div>
-                        <div class="mb-6">
-                            <label for="orderService" class="block text-gray-700 text-sm font-bold mb-2">Pilih Layanan:</label>
-                            <select id="orderService" name="orderService" required
-                                class="shadow border rounded-lg w-full py-3 px-4 text-gray-700 leading-tight focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent">
-                                <option value="">Pilih Jenis Layanan</option>
-                                <option value="laptop">Servis Laptop & PC</option>
-                                <option value="handphone">Servis Handphone & Tablet</option>
-                                <option value="tv">Servis TV & Audio</option>
-                                <option value="peralatan-rumah-tangga">Servis Peralatan Rumah Tangga</option>
-                                <option value="game-console">Servis Konsol Game</option>
-                                <option value="kamera">Servis Kamera Digital</option>
-                            </select>
-                        </div>
-                        <div class="mb-6">
-                            <label class="block text-gray-700 text-sm font-bold mb-2">Jenis Pengerjaan:</label>
-                            <div class="mt-2">
-                                <label class="inline-flex items-center mr-4">
-                                    <input type="radio" class="form-radio text-blue-600" name="orderType" value="datang" checked>
-                                    <span class="ml-2">Datang ke Lokasi Kami</span>
-                                </label>
-                                <label class="inline-flex items-center">
-                                    <input type="radio" class="form-radio text-blue-600" name="orderType" value="panggilan">
-                                    <span class="ml-2">Panggilan ke Rumah/Kantor</span>
-                                </label>
-                            </div>
-                        </div>
-                        <div class="mb-6">
-                            <label for="orderDesc" class="block text-gray-700 text-sm font-bold mb-2">Deskripsi Masalah Detail:</label>
-                            <textarea id="orderDesc" name="orderDesc" rows="5" required
-                                class="shadow appearance-none border rounded-lg w-full py-3 px-4 text-gray-700 leading-tight focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"></textarea>
-                        </div>
-                        <div class="mb-6">
-                            <label for="orderDate" class="block text-gray-700 text-sm font-bold mb-2">Pilih Tanggal Jadwal Servis:</label>
-                            <input type="date" id="orderDate" name="orderDate" required
-                                class="shadow appearance-none border rounded-lg w-full py-3 px-4 text-gray-700 leading-tight focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent">
-                        </div>
-                        <div class="flex items-center justify-between mb-6">
-                            <button type="submit"
-                                class="bg-purple-600 hover:bg-blue-700 text-white font-bold py-3 px-6 rounded-full focus:outline-none focus:shadow-outline transition-all duration-300 transform hover:scale-105">
-                                Pesan Sekarang
-                            </button>
-                        </div>
-                    </form>
+          <div class="mb-6">
+            <label for="orderDesc" class="block text-gray-700 text-sm font-bold mb-2">
+              Deskripsi Masalah Detail:
+            </label>
+            <textarea id="orderDesc" name="orderDesc" rows="5" required
+              class="shadow appearance-none border rounded-lg w-full py-3 px-4 text-gray-700 leading-tight 
+              focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"></textarea>
+          </div>
 
-                    <div id="orderSummary" class="mt-8 p-6 border-t-2 border-gray-200 bg-gray-50 rounded-xl hidden">
-                        <h3 class="text-2xl font-bold mb-4 text-blue-purple">Ringkasan Pesanan Anda:</h3>
-                        <p class="text-gray-700 mb-2"><strong>Nama:</strong> <span id="summaryName"></span></p>
-                        <p class="text-gray-700 mb-2"><strong>WhatsApp:</strong> <span id="summaryWa"></span></p>
-                        <p class="text-gray-700 mb-2"><strong>Alamat:</strong> <span id="summaryAddress"></span></p>
-                        <p class="text-gray-700 mb-2"><strong>Layanan:</strong> <span id="summaryService"></span></p>
-                        <p class="text-gray-700 mb-2"><strong>Jenis Pengerjaan:</strong> <span id="summaryOrderType"></span></p>
-                        <p class="text-gray-700 mb-2"><strong>Deskripsi Masalah:</strong> <span id="summaryDesc"></span></p>
-                        <p class="text-gray-700 mb-2"><strong>Tanggal Servis:</strong> <span id="summaryDate"></span></p>
-                        <p class="text-green-600 font-semibold mt-4">Pesanan Anda telah diterima. Kami akan segera menghubungi Anda!</p>
-                    </div>
-                </div>
-            </div>
-        </section>
+          <div class="mb-6">
+            <label for="orderDate" class="block text-gray-700 text-sm font-bold mb-2">
+              Pilih Tanggal Jadwal Servis:
+            </label>
+            <input type="date" id="orderDate" name="orderDate" required
+              class="shadow appearance-none border rounded-lg w-full py-3 px-4 text-gray-700 leading-tight 
+              focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent">
+          </div>
+
+          <div class="flex items-center justify-center">
+            <button type="submit"
+              class="bg-purple-600 hover:bg-blue-700 text-white font-bold py-3 px-6 rounded-full 
+              focus:outline-none focus:shadow-outline transition-all duration-300 transform hover:scale-105">
+              Pesan Sekarang
+            </button>
+          </div>
+        </form>
+
+        <div id="orderSummary" class="mt-8 p-6 border-t-2 border-gray-200 bg-gray-50 rounded-xl hidden">
+          <h3 class="text-2xl font-bold mb-4 text-blue-purple">Ringkasan Pesanan Anda:</h3>
+          <p class="text-gray-700 mb-2"><strong>Nama:</strong> <span id="summaryName"></span></p>
+          <p class="text-gray-700 mb-2"><strong>WhatsApp:</strong> <span id="summaryWa"></span></p>
+          <p class="text-gray-700 mb-2"><strong>Alamat:</strong> <span id="summaryAddress"></span></p>
+          <p class="text-gray-700 mb-2"><strong>Layanan:</strong> <span id="summaryService"></span></p>
+          <p class="text-gray-700 mb-2"><strong>Jenis Pengerjaan:</strong> <span id="summaryOrderType"></span></p>
+          <p class="text-gray-700 mb-2"><strong>Deskripsi Masalah:</strong> <span id="summaryDesc"></span></p>
+          <p class="text-gray-700 mb-2"><strong>Tanggal Servis:</strong> <span id="summaryDate"></span></p>
+          <p class="text-green-600 font-semibold mt-4">
+            Pesanan Anda telah diterima. Kami akan segera menghubungi Anda!
+          </p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
     </main>
 
     <!-- Footer -->
@@ -358,7 +425,7 @@
         <div class="container mx-auto px-6 text-center">
             <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
                 <div>
-                    <h3 class="text-xl font-bold mb-4 text-blue-accent">YONMUS Elektronika</h3>
+                    <h3 class="text-xl font-bold mb-4 text-blue-accent">YS Tech</h3>
                     <p class="text-gray-400">Penyedia jasa servis elektronik terpercaya untuk kebutuhan rumah dan bisnis Anda.</p>
                 </div>
                 <div>
