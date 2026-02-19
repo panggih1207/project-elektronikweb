@@ -6,35 +6,66 @@
     <title>YONMUS - Servis Elektronika Profesional</title>
     <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
-    <style>
-        /* Custom styles for dominant blue/purple theme */
-        .gradient-blue-purple {
-            background: linear-gradient(to right, #4A00E0, #8E2DE2); /* Blue to Purple gradient */
-        }
-        .text-blue-purple {
-            color: #4A00E0; /* A shade of blue */
-        }
-        .border-blue-purple {
-            border-color: #8E2DE2; /* A shade of purple */
-        }
-        .bg-blue-accent {
-            background-color: #667EEA; /* Lighter blue for accents */
-        }
-        .bg-purple-accent {
-            background-color: #9F7AEA; /* Lighter purple for accents */
-        }
-        /* Style for the fixed navbar to prevent content overlap */
-        body {
-            padding-top: 64px; /* Adjust this value if navbar height changes */
-        }
-        /* Mobile menu specific styles */
-        #mobile-menu {
-            display: none;
-        }
-        #mobile-menu.active {
-            display: block;
-        }
-    </style>
+   <style>
+    /* Anti horizontal scroll GLOBAL */
+    html, body {
+        margin: 0;
+        padding: 0;
+        width: 100%;
+        max-width: 100%;
+        overflow-x: hidden;
+    }
+
+    /* Pastikan semua elemen tidak melebihi layar */
+    *, *::before, *::after {
+        box-sizing: border-box;
+    }
+
+    img, video, canvas {
+        max-width: 100%;
+        height: auto;
+        display: block;
+    }
+
+    section, header, footer, main {
+        width: 100%;
+        max-width: 100%;
+    }
+
+    /* Custom styles */
+    .gradient-blue-purple {
+        background: linear-gradient(to right, #4A00E0, #8E2DE2);
+    }
+
+    .text-blue-purple {
+        color: #4A00E0;
+    }
+
+    .border-blue-purple {
+        border-color: #8E2DE2;
+    }
+
+    .bg-blue-accent {
+        background-color: #667EEA;
+    }
+
+    .bg-purple-accent {
+        background-color: #9F7AEA;
+    }
+
+    /* Offset navbar */
+    body {
+        padding-top: 64px;
+    }
+
+    #mobile-menu {
+        display: none;
+    }
+
+    #mobile-menu.active {
+        display: block;
+    }
+</style>
 </head>
 <body class="font-sans antialiased bg-gray-100 text-gray-800">
 
@@ -123,7 +154,7 @@
             <div class="container mx-auto px-6 text-center max-w-3xl">
                 <h2 class="text-4xl font-bold mb-8 text-blue-purple">Sejarah YS Tech</h2>
                 <p class="text-lg leading-relaxed text-gray-700 mb-4">
-                    Didirikan pada tahun 2023 , YS Tech bermula dari nama  Pasangan YONO DAN SIMUS Yang semangat untuk menyediakan solusi perbaikan elektronik yang andal dan terjangkau bagi masyarakat. Dengan dedikasi terhadap kualitas dan kepuasan pelanggan, kami terus berkembang dari bengkel kecil menjadi penyedia jasa servis elektronik terkemuka yang melayani berbagai kebutuhan, dari perangkat rumah tangga hingga gawai modern.
+                    Didirikan pada tahun 2023 , YS Tech bermula dari  semangat untuk menyediakan solusi perbaikan elektronik yang andal dan terjangkau bagi masyarakat. Dengan dedikasi terhadap kualitas dan kepuasan pelanggan, kami terus berkembang dari bengkel kecil menjadi penyedia jasa servis elektronik terkemuka yang melayani berbagai kebutuhan, dari perangkat rumah tangga hingga gawai modern.
                 </p>
                 <p class="text-lg leading-relaxed text-gray-700">
                     Kami percaya bahwa setiap perangkat elektronik memiliki nilai dan dapat diperpanjang masa pakainya dengan perawatan yang tepat. Tim teknisi kami yang berpengalaman dan bersertifikasi selalu siap memberikan layanan terbaik, menggunakan suku cadang berkualitas dan metode perbaikan terkini.
@@ -134,7 +165,7 @@
         <!-- Section Layanan Jasa -->
         <section id="layanan" class="py-16 bg-gray-50">
             <div class="container mx-auto px-6">
-                <h2 class="text-4xl font-bold text-center mb-10 text-blue-purple">Layanan Kami</h2>
+                <h2 class="text-4xl font-bold text-center mb-10 text-blue-purple select-none pointer-events-none">Layanan Kami</h2>
                 <div class="flex justify-center mb-8">
                     <input type="text" id="searchService" placeholder="Cari Layanan..."
                         class="p-3 border border-gray-300 rounded-lg shadow-sm focus:ring-blue-500 focus:border-blue-500 w-full max-w-md">
@@ -449,84 +480,6 @@
         </div>
     </footer>
 
-    <!-- Link to external JS file -->
-    <script src="assets/js/main.js"></script>
-    <script>
-        // JavaScript for mobile menu toggle
-        const mobileMenuButton = document.getElementById('mobile-menu-button');
-        const mobileMenu = document.getElementById('mobile-menu');
-
-        if (mobileMenuButton && mobileMenu) {
-            mobileMenuButton.addEventListener('click', () => {
-                mobileMenu.classList.toggle('active');
-            });
-        }
-
-        // JavaScript for service search/filtering (basic example)
-        const searchServiceInput = document.getElementById('searchService');
-        const serviceCards = document.querySelectorAll('.service-card');
-
-        if (searchServiceInput && serviceCards.length > 0) {
-            searchServiceInput.addEventListener('keyup', (event) => {
-                const searchTerm = event.target.value.toLowerCase();
-                serviceCards.forEach(card => {
-                    const cardText = card.textContent.toLowerCase();
-                    const cardCategory = card.dataset.category ? card.dataset.category.toLowerCase() : '';
-                    if (cardText.includes(searchTerm) || cardCategory.includes(searchTerm)) {
-                        card.style.display = 'block';
-                    } else {
-                        card.style.display = 'none';
-                    }
-                });
-            });
-        }
-
-        // JavaScript for order form submission and summary (basic example)
-        const orderForm = document.getElementById('orderForm');
-        const orderSummary = document.getElementById('orderSummary');
-
-        if (orderForm && orderSummary) {
-            orderForm.addEventListener('submit', function(event) {
-                event.preventDefault(); // Prevent default form submission
-
-                // Get form values
-                const name = document.getElementById('orderName').value;
-                const wa = document.getElementById('orderWa').value;
-                const address = document.getElementById('orderAddress').value;
-                const serviceSelect = document.getElementById('orderService');
-                const service = serviceSelect.options[serviceSelect.selectedIndex].text;
-                const orderType = document.querySelector('input[name="orderType"]:checked').value === 'datang' ? 'Datang ke Lokasi Kami' : 'Panggilan ke Rumah/Kantor';
-                const desc = document.getElementById('orderDesc').value;
-                const date = document.getElementById('orderDate').value;
-
-                // Populate summary div
-                document.getElementById('summaryName').textContent = name;
-                document.getElementById('summaryWa').textContent = wa;
-                document.getElementById('summaryAddress').textContent = address;
-                document.getElementById('summaryService').textContent = service;
-                document.getElementById('summaryOrderType').textContent = orderType;
-                document.getElementById('summaryDesc').textContent = desc;
-                document.getElementById('summaryDate').textContent = date;
-
-                // Show summary and hide form (optional, could just clear form)
-                orderSummary.classList.remove('hidden');
-                orderForm.reset(); // Clear the form
-
-                // In a real application, you would send this data to a server here
-                alert('Pesanan Anda telah terkirim!');
-            });
-        }
-
-        // Basic consultation form submission (for demonstration)
-        const consultationForm = document.getElementById('consultationForm');
-        if (consultationForm) {
-            consultationForm.addEventListener('submit', function(event) {
-                event.preventDefault();
-                alert('Konsultasi Anda telah terkirim! Kami akan segera menghubungi Anda.');
-                consultationForm.reset();
-            });
-        }
-
-    </script>
+    <script src="/assets/js/main.js"></script>
 </body>
 </html>
