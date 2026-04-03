@@ -29,27 +29,6 @@ Dibuat menggunakan HTML + Tailwind CSS (CDN) dengan desain responsif dan layout 
 * Tailwind CSS (CDN)
 * Vanilla JavaScript
 
----
-
-## 📂 Struktur Folder
-
-```
-project-root/
-│
-├── index.html
-├── assets/
-│   └── js/
-│       └── main.js
-│
-├── image/
-│   ├── asseticon.jpeg
-│   ├── ServisLaptop.png
-│   ├── tablet dan hp.png
-│   ├── audio.png
-│   ├── peralatanRUmah tangga.png
-│   ├── playtasion.png
-│   └── kamera.png
-```
 
 ---
 
@@ -83,20 +62,8 @@ Edit bagian footer:
 
 ```html
 Telepon: +62 812-3456-7890
-Email: info@yonmus.com
 ```
 
----
-
-### 3. Anti Horizontal Scroll
-
-Website sudah menggunakan global CSS berikut untuk memastikan tidak ada scroll kanan-kiri:
-
-```css
-html, body {
-    overflow-x: hidden;
-}
-```
 
 ---
 
